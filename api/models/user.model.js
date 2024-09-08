@@ -3,19 +3,19 @@ import mongoose from "mongoose";
 const userSchema = new mongoose.Schema({
     username:{
         type: String,
-        required : ture ,
-        unique : ture ,
+        required : true ,
+        unique : true ,
     },
     email:{
         type: String,
-        required : ture ,
-        unique : ture ,
+        required : true ,
+        unique : true ,
     },
     password:{
         type: String,
-        required : ture ,
+        required : true ,
     }
-}, {timestamps : ture});
+}, {timestamps : true});
 
 const User = mongoose.model('User', userSchema);
 
