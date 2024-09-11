@@ -1,5 +1,7 @@
-import React, { useState } from 'react'
-import {Link} from 'react-router-dom'
+import React, { useState } from 'react';
+import {Link} from 'react-router-dom';
+import OAuth from '../components/OAuth';
+
 
 export default function Signup() {
   const [fromData, setFromData] = useState({});
