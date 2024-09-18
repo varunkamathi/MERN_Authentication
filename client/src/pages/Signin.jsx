@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useState } from 'react';
-import { signInStart, signInSuccess, signInFailure } from '../../redux/user/userSlice.js';
+import { signInStart,signInSuccess,signInFailure } from '../redux/user/userSlice';
 import { useDispatch, useSelector } from 'react-redux';
 
 export default function SignIn() {
@@ -25,12 +25,11 @@ export default function SignIn() {
         body: JSON.stringify(formData),
       });
       const data = await res.json();
-    
+      dispatch(signInSuccess(data));
       if (data.success === false) {
         dispatch(signInFailure());
         return;
       }
-      dispatch(signInSuccess());
       navigate('/');
 
     } catch (error) {
