@@ -6,6 +6,7 @@ import About from "./pages/About";
 import Profile from "./pages/Profile";
 import Header from "./components/Header";
 export default function App() {
+  // console.log(import.meta.env.VITE_FIREBASE_API_KEY)
   return <BrowserRouter>
   {/* header*/}
   <Header />
